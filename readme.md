@@ -1,0 +1,3 @@
+## OMDb-client
+
+Requires requests
