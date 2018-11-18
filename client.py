@@ -72,7 +72,9 @@ if __name__ == "__main__":
                 number_of_pages = int(total_results/10) + 1
             else:
                 number_of_pages = int(total_results/10)
-            for page in range(1, number_of_pages):
+            
+            print("Numero total de paginas: " + str(number_of_pages))
+            for page in range(1, number_of_pages + 1):
                 query['page'] = page
                 request = requests.get(OMDB_URL, params=query)
                 response = request.content
