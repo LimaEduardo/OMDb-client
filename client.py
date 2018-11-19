@@ -77,7 +77,7 @@ if __name__ == "__main__":
             for page in range(1, number_of_pages + 1):
                 query['page'] = page
                 request = requests.get(OMDB_URL, params=query)
-                response = request.content
+                response = request.content.decode('utf-8')
                 response_dict = json.loads(response)
                 results = response_dict['Search']
                 for movie in results:
