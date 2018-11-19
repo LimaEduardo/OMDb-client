@@ -60,7 +60,7 @@ if __name__ == "__main__":
     get_all_pages = getPages()
 
     request = requests.get(OMDB_URL, params=query)
-    response = request.content
+    response = request.content.decode('utf-8')
     response_dict = json.loads(response)
 
     filtered_movies = []
